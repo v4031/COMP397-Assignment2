@@ -1,0 +1,37 @@
+{
+
+"images": [
+    "test.png"
+],
+
+"framerate": 20,
+"frames": [
+    [1, 1, 150, 50, 0, 75, 25],
+    [153, 1, 65, 65, 0, 32.5, 32.5],
+    [1, 53, 150, 50, 0, 75, 25],
+    [1, 105, 150, 50, 0, 75, 25],
+    [153, 68, 30, 36, 0, 15, 18],
+    [153, 106, 30, 36, 0, 15, 18],
+    [185, 68, 30, 30, 0, 15, 15],
+    [185, 100, 30, 26, 0, 15, 13],
+    [185, 128, 16, 16, 0, 8, 8]
+],
+
+"animations": {
+    "button": { "frames": [0] },
+    "placeholder": { "frames": [1] },
+    "restartButton": { "frames": [2] },
+    "startButton": { "frames": [3] },
+    "spaceship": { "frames": [4] },
+    "spaceship1": { "frames": [5] },
+    "powerup": { "frames": [6] },
+    "enemy": { "frames": [7] },
+    "bullet": { "frames": [8] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:28776b9f9bbe4b72f8971419c9926768:7ef79e10e2ad740f45a702a769ad861d:02ab132358d6d8b512e80119463a8329$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}
