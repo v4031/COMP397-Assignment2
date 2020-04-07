@@ -13,9 +13,11 @@ var Game = (function () {
     var assetManifest = [
         { id: "space", src: "./Assets/images/bg_space_seamless.png" },
         { id: "atlas", src: "./Assets/images/test.png" },
-        { id: "engine", src: "./Assets/audio/engine.ogg" },
-        { id: "yay", src: "./Assets/audio/yay.ogg" },
-        { id: "thunder", src: "./Assets/audio/thunder.ogg" },
+        { id: "start", src: "./Assets/audio/start.mp3" },
+        { id: "laser", src: "./Assets/audio/laser.mp3" },
+        { id: "hit", src: "./Assets/audio/hit.wav" },
+        { id: "powerUp", src: "./Assets/audio/powerUp.mp3" },
+        { id: "sad", src: "./Assets/audio/sad.mp3" }
     ];
     var spriteData = {
         "images": {},

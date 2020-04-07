@@ -68,18 +68,7 @@ var scenes;
             });
             if (createjs.Ticker.getTicks() % 600 == 0) {
                 console.log("speed up");
-                switch (util.Mathf.RandomIntRange(0, 1)) {
-                    case 0:
-                        {
-                            config.Game.ENEMY_SPEED += 0.05;
-                        }
-                        break;
-                    case 1:
-                        {
-                            config.Game.ENEMY_NUM += 1;
-                        }
-                        break;
-                }
+                config.Game.ENEMY_SPEED += 0.05;
             }
         };
         Play.prototype.Main = function () {
@@ -95,7 +84,6 @@ var scenes;
             this.addChild(this._scoreBoard.ScoreLabel);
         };
         Play.prototype.Clean = function () {
-            this._player.engineSound.stop();
             this.removeAllChildren();
         };
         return Play;

@@ -69,7 +69,7 @@ var managers;
                     bullet.speed = 4 + _this._playerBulletSpeed;
                 }
                 else if (bullet.type == enums.GameObjectType.ENEMY_BULLET) {
-                    bullet.speed = 4 + _this._enemyBulletSpeed * config.Game.ENEMY_SPEED;
+                    bullet.speed = 4 + _this._enemyBulletSpeed + config.Game.ENEMY_SPEED / 2;
                 }
                 bullet.Update();
             });

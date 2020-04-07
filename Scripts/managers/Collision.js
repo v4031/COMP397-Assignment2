@@ -53,9 +53,10 @@ var managers;
                 case enums.GameObjectType.UPGRADE:
                     {
                         if (object1.type == enums.GameObjectType.PLAYER) {
-                            var yaySound = createjs.Sound.play("yay");
-                            yaySound.volume = 0.2;
+                            var powerUpSound = createjs.Sound.play("powerUp");
+                            powerUpSound.volume = 0.2;
                             config.Game.PLAYER.Upgrade();
+                            config.Game.SCORE_BOARD.Score += 50;
                             if (config.Game.SCORE >= 1000 && config.Game.SCORE % 1000 == 0) {
                                 console.log("yay");
                                 config.Game.SCORE_BOARD.Lives += 1;
@@ -67,6 +68,8 @@ var managers;
                 case enums.GameObjectType.ENEMY:
                     {
                         if (object1.type == enums.GameObjectType.BULLET) {
+                            var hitSound = createjs.Sound.play("hit");
+                            hitSound.volume = 0.2;
                             config.Game.SCORE_BOARD.Score += 100;
                             if (config.Game.SCORE >= 1000 && config.Game.SCORE % 1000 == 0) {
                                 console.log("yay");
@@ -79,12 +82,13 @@ var managers;
                             object1.Reset();
                         }
                         if (object1.type == enums.GameObjectType.PLAYER) {
-                            console.log("Collision with Cloud!");
-                            var thunderSound = createjs.Sound.play("thunder");
-                            thunderSound.volume = 0.2;
+                            var hitSound = createjs.Sound.play("hit");
+                            hitSound.volume = 0.2;
                             config.Game.SCORE_BOARD.Lives -= 1;
                             // check if lives falls less than 1 and then switch to END scene
                             if (config.Game.LIVES < 1) {
+                                var sadSound = createjs.Sound.play("sad");
+                                sadSound.volume = 0.2;
                                 config.Game.SCENE = scenes.State.END;
                             }
                             object2.Reset();
@@ -93,11 +97,13 @@ var managers;
                     break;
                 case enums.GameObjectType.ENEMY_BULLET:
                     {
-                        var thunderSound = createjs.Sound.play("thunder");
-                        thunderSound.volume = 0.2;
+                        var hitSound = createjs.Sound.play("hit");
+                        hitSound.volume = 0.2;
                         config.Game.SCORE_BOARD.Lives -= 1;
                         // check if lives falls less than 1 and then switch to END scene
                         if (config.Game.LIVES < 1) {
+                            var sadSound = createjs.Sound.play("sad");
+                            sadSound.volume = 0.2;
                             config.Game.SCENE = scenes.State.END;
                         }
                         object2.Reset();

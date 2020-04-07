@@ -42,10 +42,12 @@ module scenes
             this.addChild(this._scoreBoard.highScoreLabel);
 
             this._restartButton.on("click", ()=>{
+                let startSound = createjs.Sound.play("start");
+                startSound.volume = 0.2;
                 config.Game.LIVES = 3;
                 config.Game.SCORE = 0;
                 config.Game.ENEMY_SPEED = 1;
-                config.Game.ENEMY_NUM = 1;
+                config.Game.ENEMY_NUM = 5;
                 config.Game.SCENE = scenes.State.PLAY;
             });
 

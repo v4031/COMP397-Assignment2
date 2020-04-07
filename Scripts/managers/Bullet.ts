@@ -89,7 +89,7 @@ module managers
                 }
                 else if(bullet.type == enums.GameObjectType.ENEMY_BULLET)
                 {
-                    bullet.speed = 4 + this._enemyBulletSpeed* config.Game.ENEMY_SPEED;
+                    bullet.speed = 4 + this._enemyBulletSpeed + config.Game.ENEMY_SPEED/2;
                 }
                 bullet.Update();
             });

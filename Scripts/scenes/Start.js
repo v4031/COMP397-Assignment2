@@ -39,6 +39,8 @@ var scenes;
             this.addChild(this._instruction);
             this.addChild(this._startButton);
             this._startButton.on("click", function () {
+                var startSound = createjs.Sound.play("start");
+                startSound.volume = 0.2;
                 config.Game.SCENE = scenes.State.PLAY;
             });
         };

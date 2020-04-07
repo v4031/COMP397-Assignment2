@@ -8,7 +8,7 @@ module config
         public static SCENE: scenes.State;
         public static ASSETS: createjs.LoadQueue;
         public static FPS: number = 60; // 60 Frames per second
-        public static ENEMY_NUM: number = 3;
+        public static ENEMY_NUM: number = 5;
         public static ENEMY_SPEED: number = 1;
         public static LIVES: number = 3;
         public static SCORE: number = 0;

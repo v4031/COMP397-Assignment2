@@ -51,7 +51,7 @@ var objects;
             var dx = Math.cos(this._dir);
             var dy = Math.sin(this._dir);
             this._bulletSpawn = new objects.Vector2(this.position.x + dx * 40, this.position.y + dy * 40);
-            // fire bullets every 40 frames
+            // fire bullets every 90 frames
             var test = createjs.Ticker.getTicks() % 90;
             if (test == 0) {
                 this.FireBullets();

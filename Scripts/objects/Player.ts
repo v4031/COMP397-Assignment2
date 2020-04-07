@@ -78,9 +78,6 @@ module objects
         public Start(): void 
         {
             this.type = enums.GameObjectType.PLAYER;
-            this._engineSound = createjs.Sound.play("engine");
-            this._engineSound.loop = -1; // loop forever
-            this._engineSound.volume = 0.1; // 10% volume
             this.speed = 3;
             this._fireRate = 40;
             this.position = new objects.Vector2(this.halfWidth,config.Game.SCREEN_HEIGHT * 0.5);
@@ -108,6 +105,8 @@ module objects
 
         public FireBullets(): void
         {
+            let laserSound = createjs.Sound.play("laser");
+            laserSound.volume = 0.2;
             let bullet = config.Game.BULLET_MANAGER.GetBullet();
             bullet.type = enums.GameObjectType.BULLET;
             bullet.position = this._bulletSpawn;
@@ -140,7 +139,7 @@ module objects
                         if(this.speed < 10)
                         {
                             console.log("Speed Upgrade");
-                            this.speed +=0.5;
+                            this.speed +=1;
                         }
                         else
                         {
